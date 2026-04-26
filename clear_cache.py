@@ -1,7 +1,6 @@
 import os
 from pymongo import MongoClient
 from dotenv import load_dotenv
-
 load_dotenv()
 
 def manual_clear_cache():
@@ -21,4 +20,5 @@ def manual_clear_cache():
     print("The cache is now empty and ready for new 'Top 20' queries.")
 
 if __name__ == "__main__":
+    
     manual_clear_cache()
