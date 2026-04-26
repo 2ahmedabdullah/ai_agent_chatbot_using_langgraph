@@ -8,7 +8,6 @@ load_dotenv()
 def list_cache_entries():
     uri = os.getenv("CHATBOT_RW_CHAT_HISTORY_URL")
     db_name = os.getenv("MONGODB_DATABASE_NAME")
-    
     mongo_client = MongoClient(uri)
     db = mongo_client[db_name] if db_name else mongo_client["chatbot_db"]
     
