@@ -38,8 +38,7 @@ def router_node(state: PublicAgentState):
         model="gpt-4o-mini", 
         temperature=0, # Set to 0 for maximum consistency
         openai_api_key=api_key 
-    )
-    
+    )  
     # This forces the LLM to follow your RouterOutput class (toxic, greeting, vague, or valid)
     structured_llm = llm.with_structured_output(RouterOutput)
 
