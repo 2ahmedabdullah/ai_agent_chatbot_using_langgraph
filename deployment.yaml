@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: public-agent-chatbot
+  labels:
+    app: public-agent
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: public-agent
+  template:
+    metadata:
+      labels:
+        app: public-agent
+    spec:
+      containers:
+      - name: chatbot-container
+        # Replace this with your actual image URI (e.g., from ECR or DockerHub)
+        image: your-registry/company-chatbot-public-agent:latest
+        ports:
+        - containerPort: 8004
+        env:
+        - name: PUBLIC_AGENT_OPENAI_APIKEY
+          valueFrom:
+            secretKeyRef:
+              name: chatbot-secrets
+              key: openai-api-key
+        # Example resources for a chatbot
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "512Mi"
+          limits:
+            cpu: "500m"
+            memory: "1Gi"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: public-agent-service
+spec:
+  selector:
+    app: public-agent
+  ports:
+    - protocol: TCP
+      port: 80       # Port the service listens on
+      targetPort: 8004 # Port the container listens on
+  type: ClusterIP
