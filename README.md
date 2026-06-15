@@ -304,7 +304,7 @@ python list_cache.py
 If the answer is not supported by the indexed documents, the bot uses this fallback:
 
 ```text
-I sincerely apologize, but I don't have the information needed to answer your request at this time. We are currently working hard to expand my capabilities and knowledge base to serve you better. For now, please reach out to **support@konguess.com**, and our team will be happy to assist you manually with this feature or data point.
+I sincerely apologize, but I don't have the information needed to answer your request at this time. We are currently working hard to expand my capabilities and knowledge base to serve you better. For now, please reach out to **support@company.com**, and our team will be happy to assist you manually with this feature or data point.
 ```
 
 ## Developer Notes
