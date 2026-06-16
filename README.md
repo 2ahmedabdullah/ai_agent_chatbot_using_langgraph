@@ -64,6 +64,8 @@ Important behavior:
 
 ## Graph Nodes
 
+[!Graph Nodes](langgraph_nodes.png)
+
 **check_cache**: Semantic FAQ lookup via MongoDB cold memory. Returns cached response if similarity > threshold.
 
 **router**: LLM classifier (gpt-4o-mini) with structured output. Routes to abuse, greeting, vague, or rag node.
