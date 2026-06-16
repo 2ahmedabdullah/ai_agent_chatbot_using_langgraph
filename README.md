@@ -64,7 +64,9 @@ Important behavior:
 
 ## Graph Nodes
 
-[!Graph Nodes](langgraph_nodes.png)
+![Graph Nodes](langgraph_nodes.png)
+
+<img src="langgraph_nodes.png" alt="Graph Nodes" width="200">
 
 **check_cache**: Semantic FAQ lookup via MongoDB cold memory. Returns cached response if similarity > threshold.
 
