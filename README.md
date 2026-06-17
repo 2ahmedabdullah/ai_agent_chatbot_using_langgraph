@@ -1,6 +1,6 @@
 # Public Agent Chatbot
 
-This repository contains the backend for the Mesa public-agent chatbot. The bot is built as a LangGraph workflow that accepts a user query, checks safety and clarity, looks for cached answers, retrieves document-grounded context from RAG, and returns a final humanized response.
+This repository contains the backend for the Company X public-agent chatbot. The bot is built as a LangGraph workflow that accepts a user query, checks safety and clarity, looks for cached answers, retrieves document-grounded context from RAG, and returns a final humanized response.
 
 The public agent is intentionally scoped to the knowledge available in the project documents. It should not act like a general-purpose chatbot. If the answer is not available from the indexed RAG documents, it responds gracefully with the configured support fallback message.
 
@@ -230,7 +230,7 @@ Invoke-RestMethod `
   -Uri "http://127.0.0.1:8000/chat" `
   -Method Post `
   -ContentType "application/json" `
-  -Body '{"query":"What does Mesa help with?","session_id":"test-session"}'
+  -Body '{"query":"What does Company help with?","session_id":"test-session"}'
 ```
 
 Streaming endpoint:
@@ -240,7 +240,7 @@ Invoke-WebRequest `
   -Uri "http://127.0.0.1:8000/chat/stream" `
   -Method Post `
   -ContentType "application/json" `
-  -Body '{"query":"What does Mesa help with?","session_id":"test-session"}'
+  -Body '{"query":"What does Company help with?","session_id":"test-session"}'
 ```
 
 Available endpoints:
