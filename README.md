@@ -309,6 +309,7 @@ If the answer is not supported by the indexed documents, the bot uses this fallb
 I sincerely apologize, but I don't have the information needed to answer your request at this time. We are currently working hard to expand my capabilities and knowledge base to serve you better. For now, please reach out to **support@company.com**, and our team will be happy to assist you manually with this feature or data point.
 ```
 
+
 ## Developer Notes
 
 - `app.py` is a placeholder for potential async deployment frameworks.
@@ -322,3 +323,4 @@ I sincerely apologize, but I don't have the information needed to answer your re
 - Quality check node has built-in retry: if response fails quality check, RAG is retried once before falling back to human support message.
 - Session IDs are auto-generated with UUID4 if not provided.
 - All timestamps in MongoDB use UTC.
+
